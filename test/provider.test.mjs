@@ -24,6 +24,6 @@ test('第二房间已有别人占用，排程更正待独立送达确认', async
   const receipts = async () => (await (await fetch(root + '/notices/receipts')).json())
   assert.equal((await receipts())[1].state, 'queued')
   await post(root, '/lab?stage=informed')
-  assert.equal((await receipts())[1].receipt, 'N3')
+  assert.equal((await receipts())[1].receipt, 'N4')
   assert.equal((await receipts())[1].state, 'delivered')
 })

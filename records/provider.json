@@ -5,10 +5,10 @@
         "path": "/rooms/confirmations",
         "body": [
           {
-            "room": "D",
+            "room": "R1",
             "window": [
-              45,
-              70
+              20,
+              37
             ],
             "person": "B1",
             "state": "held"
@@ -38,19 +38,19 @@
         "path": "/rooms/confirmations",
         "body": [
           {
-            "room": "D",
+            "room": "R1",
             "window": [
-              45,
-              70
+              20,
+              37
             ],
             "person": "B1",
             "state": "held"
           },
           {
-            "room": "D",
+            "room": "R2",
             "window": [
-              70,
-              90
+              55,
+              77
             ],
             "person": "B9",
             "state": "held"
@@ -97,12 +97,12 @@
             "slot": "S1",
             "receipt": "N1",
             "state": "superseded",
-            "by": "N3"
+            "by": "N4"
           },
           {
             "candidate": "B1",
-            "slot": "S4",
-            "receipt": "N3",
+            "slot": "S5",
+            "receipt": "N4",
             "state": "delivered"
           }
         ]
