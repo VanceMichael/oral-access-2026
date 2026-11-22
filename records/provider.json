@@ -11,7 +11,8 @@
               37
             ],
             "person": "B1",
-            "state": "held"
+            "state": "held",
+            "service": "available"
           }
         ]
       },
@@ -44,7 +45,8 @@
               37
             ],
             "person": "B1",
-            "state": "held"
+            "state": "held",
+            "service": "offline"
           },
           {
             "room": "R2",
@@ -104,6 +106,21 @@
             "slot": "S5",
             "receipt": "N4",
             "state": "delivered"
+          }
+        ]
+      },
+      {
+        "path": "/rooms/confirmations",
+        "body": [
+          {
+            "room": "R1",
+            "window": [
+              81,
+              98
+            ],
+            "person": "B1",
+            "state": "held",
+            "service": "available"
           }
         ]
       }
