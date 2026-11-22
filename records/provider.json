@@ -1,0 +1,113 @@
+{
+  "stages": {
+    "single": [
+      {
+        "path": "/rooms/confirmations",
+        "body": [
+          {
+            "room": "D",
+            "window": [
+              45,
+              70
+            ],
+            "person": "B1",
+            "state": "held"
+          }
+        ]
+      },
+      {
+        "path": "/notices/receipts",
+        "body": [
+          {
+            "candidate": "B1",
+            "slot": "S1",
+            "receipt": "N1",
+            "state": "delivered"
+          },
+          {
+            "candidate": "B2",
+            "slot": "S2",
+            "receipt": "N2",
+            "state": "queued"
+          }
+        ]
+      }
+    ],
+    "merged": [
+      {
+        "path": "/rooms/confirmations",
+        "body": [
+          {
+            "room": "D",
+            "window": [
+              45,
+              70
+            ],
+            "person": "B1",
+            "state": "held"
+          },
+          {
+            "room": "D",
+            "window": [
+              70,
+              90
+            ],
+            "person": "B9",
+            "state": "held"
+          }
+        ]
+      },
+      {
+        "path": "/notices/receipts",
+        "body": [
+          {
+            "candidate": "B1",
+            "slot": "S1",
+            "receipt": "N1",
+            "state": "delivered"
+          },
+          {
+            "candidate": "B2",
+            "slot": "S2",
+            "receipt": "N2",
+            "state": "queued"
+          }
+        ]
+      },
+      {
+        "path": "/notices/amend",
+        "body": {
+          "receipt": "N3",
+          "state": "accepted"
+        },
+        "method": "POST",
+        "payload": {
+          "candidate": "B1",
+          "receipt": "N1"
+        },
+        "status": 202
+      }
+    ],
+    "informed": [
+      {
+        "path": "/notices/receipts",
+        "body": [
+          {
+            "candidate": "B1",
+            "slot": "S1",
+            "receipt": "N1",
+            "state": "superseded",
+            "by": "N3"
+          },
+          {
+            "candidate": "B1",
+            "slot": "S4",
+            "receipt": "N3",
+            "state": "delivered"
+          }
+        ]
+      }
+    ]
+  },
+  "common": []
+}
