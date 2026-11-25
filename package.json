@@ -3,13 +3,19 @@
   "version": "1.0.0",
   "private": true,
   "type": "module",
+  "main": "./index.mjs",
+  "bin": {
+    "oral-access": "./assistant/cli.mjs"
+  },
   "engines": {
     "node": "22.23.4"
   },
   "scripts": {
     "source": "node source/source.mjs",
     "test": "node --test",
-    "provider": "node source/provider.mjs"
+    "provider": "node source/provider.mjs",
+    "assistant": "node assistant/cli.mjs",
+    "workbench": "node assistant/server.mjs"
   },
   "dependencies": {
     "playwright": "1.56.1"
